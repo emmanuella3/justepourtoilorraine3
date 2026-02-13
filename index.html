@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Veux-tu être ma Valentine ?</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      font-family: "Segoe UI", system-ui, sans-serif;
+      background: linear-gradient(135deg, #ff9aa2, #ffb7b2, #ffd7ba);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    #page1 {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      color: #d81e5b;
+      text-shadow: 0 0 15px rgba(216,30,91,0.5);
+      margin-bottom: 2.5rem;
+      animation: heartbeat 2s infinite;
+      text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 5rem;
+      position: relative;
+    }
+
+    button {
+      font-size: 2.2rem;
+      padding: 1.2rem 3.5rem;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.15s;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+    }
+
+    #yes {
+      background: #ff4d6d;
+      color: white;
+      font-weight: bold;
+    }
+
+    #yes:hover {
+      transform: scale(1.12);
+      background: #ff3366;
+    }
+
+    #no {
+      background: #555;
+      color: white;
+    }
+
+    #no:hover {
+      background: #777;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.08); }
+    }
+
+    /* Page 2 - layout texte gauche | images droite */
+    #page2 {
+      display: none;
+      min-height: 100vh;
+      padding: 40px 5%;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 60px;
+      max-width: 1400px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .text-side {
+      flex: 1;
+      min-width: 320px;
+    }
+
+    .text-side h1 {
+      font-size: 3.5rem;
+      margin-top: 0;
+      text-align: left;
+    }
+
+    .text-side p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+      max-width: 700px;
+    }
+
+    .gallery {
+      flex: 1;
+      min-width: 320px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.06) rotate(1.5deg);
+    }
+
+    audio {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      opacity: 0.7;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+        gap: 40px;
+      }
+      .text-side h1 {
+        text-align: center;
+      }
+      .text-side p {
+        text-align: center;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2.6rem; }
+      button { font-size: 1.6rem; padding: 1rem 2.5rem; }
+      .buttons { gap: 2rem; flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="page1">
+    <h1>Veux-tu être ma Valentine ? ❤️</h1>
+
+    <div class="buttons">
+      <button id="yes">Oui 😍</button>
+      <button id="no">Non 😕</button>
+    </div>
+  </div>
+
+  <div id="page2">
+    <div class="container">
+      <div class="text-side">
+        <h1>Je t’aime fort fort fort ! 🥰💕</h1>
+        <p>
+          <em>Merci d’avoir dit oui… même si on sait que tu n'avais pas le choix😏<br><br>
+          Ma petite sœur chérie,
+
+En ce jour de Saint-Valentin, je veux que tu saches à quel point tu comptes pour moi. Tu es bien plus qu’une sœur : tu es une partie de mon cœur, et l’une des plus belles bénédictions que la vie m’ait offertes. 
+T’avoir dans ma vie est l’un des meilleurs cadeaux que je puisse avoir, 
+et je remercie chaque jour d’avoir une sœur aussi précieuse que toi.
+je sais que tu es entre de bonnes mains avec monsieur M.
+
+Je tiens énormément à toi, et quoi qu’il arrive, je serai toujours là pour te protéger, te soutenir et t’aimer. N’oublie jamais que tu es unique, incroyable, 
+et infiniment aimée.</em>
+
+
+        </p>
+        <p style="margin-top: 50px; font-size: 1.4rem;">
+          Joyeuse Saint-Valentin mon cœur 💖<br>
+          <small>(Je t'aime très fort ma petite, aujourd'hui et pour toujours)</small>
+        </p>
+      </div>
+
+      <div class="gallery">
+        <!-- →→→ Remplace par TES vraies photos ICI ←←← -->
+        <img src="photo1.jpg" alt="souvenir 1">
+        <img src="PHOTO2.jpg" alt="souvenir 2">
+        <img src="PHOTO3.jpg" alt="souvenir 3">
+        <img src="photo 4.jpg" alt="souvenir 4">
+        <!-- Tu peux en ajouter autant que tu veux -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Musique romantique en fond (tu peux changer l'URL) -->
+  <audio id="bgMusic" autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sweet.mp3" type="audio/mpeg">
+    <!-- Alternative gratuite si le lien ci-dessus ne marche plus : -->
+    <!-- <source src="https://assets.mixkit.co/music/preview/mixkit-feeling-happy-5.mp3" type="audio/mpeg"> -->
+    Ton navigateur ne supporte pas l'audio.
+  </audio>
+
+<script>
+  const yesBtn = document.getElementById("yes");
+  const noBtn  = document.getElementById("no");
+  let yesSize = 2.2;
+
+  noBtn.addEventListener("click", () => {
+    yesSize += 0.4;
+    yesBtn.style.fontSize = yesSize + "rem";
+    yesBtn.style.padding = (1.2 + yesSize*0.3) + "rem " + (3.5 + yesSize*0.8) + "rem";
+
+    const messages = [
+      "Essaie encore 😏", "T’es sûre ? 🤨", "Le bouton grandit…", 
+      "Allez… on sait tous les deux comment ça va finir", "Non = Oui en langage Valentin",
+      "Tu joues avec le destin là…", "🥹💔", "Encore un non ? 😢"
+    ];
+    noBtn.textContent = messages[Math.floor(Math.random() * messages.length)];
+  });
+
+  yesBtn.addEventListener("click", () => {
+    document.getElementById("page1").style.display = "none";
+    document.getElementById("page2").style.display = "block";
+    // Optionnel : monte un peu le son quand on arrive sur la page 2
+    document.getElementById("bgMusic").volume = 0.35;
+  });
+
+  // Volume initial bas
+  document.getElementById("bgMusic").volume = 0.20;
+</script>
+
+</body>
+</html>
